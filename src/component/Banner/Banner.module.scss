@@ -1,0 +1,46 @@
+.banner {
+  position: relative;
+  z-index: 1;
+  padding-top: 56.25%;
+
+  &__container {
+    position: absolute;
+    width: 255px;
+    height: 350px;
+    background-color: #86D3F4;
+    top: 25%;
+    right: 0;
+    @media (max-width: 990px) {
+      width: 205px;
+      height: 300px;
+      top: 15%;
+    }
+  }
+
+  &__body {
+    padding: 20px 10px 0 10px;
+    text-align: center;
+  }
+
+  h3 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  p {
+    max-width: 140px;
+    font-size: 14px;
+    line-height: 16px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  &__btn {
+    color: #86D3F4;
+    background-color: #000000;
+    width: 156px;
+    height: 52px;
+  }
+}
+
