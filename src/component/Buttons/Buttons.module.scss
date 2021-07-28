@@ -1,0 +1,40 @@
+.buttonBlock {
+  max-width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.btn {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 12px 30px;
+  width: 88px;
+  height: 52px;
+  background-color: transparent;
+  border: 2px solid black;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    color: white;
+    background-color: black;
+  }
+  &:active {
+    transform:scale(0.9, 0.9);
+  }
+}
+
+.clear {
+  width: 187px;
+}
+
+.active {
+  color: white;
+  background-color: black;
+}
+
+.click {
+  transform:scale(0.9, 0.9);
+}
