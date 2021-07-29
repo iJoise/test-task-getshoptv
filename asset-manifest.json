@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/test-task-getshoptv/static/css/main.13cf1d36.chunk.css",
+    "main.js": "/test-task-getshoptv/static/js/main.1a1e5bfc.chunk.js",
+    "main.js.map": "/test-task-getshoptv/static/js/main.1a1e5bfc.chunk.js.map",
+    "runtime-main.js": "/test-task-getshoptv/static/js/runtime-main.45711289.js",
+    "runtime-main.js.map": "/test-task-getshoptv/static/js/runtime-main.45711289.js.map",
+    "static/js/2.0a680b8e.chunk.js": "/test-task-getshoptv/static/js/2.0a680b8e.chunk.js",
+    "static/js/2.0a680b8e.chunk.js.map": "/test-task-getshoptv/static/js/2.0a680b8e.chunk.js.map",
+    "static/js/3.60af6de4.chunk.js": "/test-task-getshoptv/static/js/3.60af6de4.chunk.js",
+    "static/js/3.60af6de4.chunk.js.map": "/test-task-getshoptv/static/js/3.60af6de4.chunk.js.map",
+    "index.html": "/test-task-getshoptv/index.html",
+    "static/css/main.13cf1d36.chunk.css.map": "/test-task-getshoptv/static/css/main.13cf1d36.chunk.css.map",
+    "static/js/2.0a680b8e.chunk.js.LICENSE.txt": "/test-task-getshoptv/static/js/2.0a680b8e.chunk.js.LICENSE.txt",
+    "static/media/Promo.module.scss": "/test-task-getshoptv/static/media/promo-bg.9fa94560.png",
+    "static/media/video.0ae813ae.mp4": "/test-task-getshoptv/static/media/video.0ae813ae.mp4"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.45711289.js",
+    "static/js/2.0a680b8e.chunk.js",
+    "static/css/main.13cf1d36.chunk.css",
+    "static/js/main.1a1e5bfc.chunk.js"
+  ]
+}
