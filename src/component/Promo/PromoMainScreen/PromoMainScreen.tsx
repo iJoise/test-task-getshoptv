@@ -1,13 +1,13 @@
 import React, {useCallback} from "react";
 import {useDispatch} from "react-redux";
-import {showPromoPage} from "../../../state/app-reducer";
+import {setIsShowPromoPage} from "../../../state/app-reducer";
 import s from "./PromoMainScreen.module.scss";
 
 export const PromoMainScreen: React.FC = () => {
    const dispatch = useDispatch();
 
    const hidePromoPageHandler = useCallback(() => {
-      dispatch(showPromoPage(false))
+      dispatch(setIsShowPromoPage(false))
    }, [dispatch]);
 
 

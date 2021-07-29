@@ -1,19 +1,18 @@
 .sidebar {
-  max-width: 380px;
+  width: 380px;
   height: 100%;
   background-color: #86D3F4;
   padding: 0 48px;
   box-sizing: border-box;
   @media (max-width: 992px) {
-    max-width: 305px;
+    width: 305px;
     padding: 0 38px;
   }
   @media (max-width: 768px) {
-    max-width: 240px;
+    width: 240px;
     padding: 0 20px;
   }
   @media (max-width: 480px) {
-    max-width: none;
     width: 100%;
   }
 
@@ -52,7 +51,6 @@
       padding: 0 0 5px 0;
     }
   }
-
 
   &__row {
     @media (max-width: 480px) {
@@ -99,7 +97,7 @@
     width: 182px;
   }
   @media (max-width: 480px) {
-    width: 140px;
+    width: 170px;
     height: 35px;
   }
 }
@@ -108,4 +106,14 @@
   border: none;
   background-color: black;
   color: #ffffff;
+}
+
+.error {
+  color: #EA0000;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
 }

@@ -1,45 +1,23 @@
-import React, {useState} from "react";
+import React from "react";
 import s from "./PromoSidebar.module.scss";
-import {InputPhone} from "../InputPhone/InputPhone";
-import {Buttons} from "../Buttons/Buttons";
-import {Checkbox} from "../Checkbox/Checkbox";
+import {EnteringPhone} from "./EnteringPhone/EnteringPhone";
+import {VerifiedPhone} from "./VerifiedPhone/VerifiedPhone";
+import {useSelector} from "react-redux";
+import {AppRootStateType} from "../../../state/store";
 
 
-export const PromoSidebar: React.FC = () => {
-   const [phone, setPhone] = useState('');
-   const [checked, setChecked] = useState(false);
+export const PromoSidebar: React.FC = React.memo(() => {
 
-   const validatePhoneHandler = () => {
-
-   }
-
-   const disabledConfirmBtn = !checked && phone.length !== 10;
-   const confirmBtnClass = checked && phone.length === 10
-      ? `${s.confirm_btn} ${s.enabled}`
-      : `${s.confirm_btn}`
+   const validPhoneNumber = useSelector<AppRootStateType, boolean>(state => state.app.valid )
 
    return (
       <div className={s.sidebar}>
-         <h2>Введите ваш номер мобильного телефона</h2>
-         <InputPhone phone={phone}/>
-         <p>и с Вами свяжется наш менеждер для дальнейшей консультации</p>
-         <div className={s.sidebar__row}>
-            <Buttons setPhone={setPhone} phone={phone}/>
-            <div className={s.sidebar__bottom}>
-               <div className={s.checkbox_box}>
-                  <Checkbox
-                     setChecked={setChecked}
-                     checked={checked}
-                  >Согласие на обработку персональных данных</Checkbox>
-               </div>
-               <button
-                  disabled={disabledConfirmBtn}
-                  className={confirmBtnClass}
-                  onClick={validatePhoneHandler}
-               >ПОДТВЕРДИТЬ НОМЕР
-               </button>
-            </div>
-         </div>
+         {
+            !validPhoneNumber
+            ? <EnteringPhone/>
+            : <VerifiedPhone/>
+         }
       </div>
    )
-}
+})
+

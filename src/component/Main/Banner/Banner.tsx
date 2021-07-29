@@ -2,7 +2,7 @@ import React, {useCallback, useEffect, useState} from "react";
 import s from "./Banner.module.scss";
 import qr from '../../../assets/image/qr.png'
 import {useDispatch} from "react-redux";
-import {showPromoPage} from "../../../state/app-reducer";
+import {setIsShowPromoPage} from "../../../state/app-reducer";
 
 // type BannerPropsType = {
 // }
@@ -23,7 +23,7 @@ export const Banner: React.FC = React.memo(() => {
    }, []);
 
    const showPromoPageHandler = useCallback(() => {
-      dispatch(showPromoPage(true));
+      dispatch(setIsShowPromoPage(true));
    }, [dispatch])
 
    return (
