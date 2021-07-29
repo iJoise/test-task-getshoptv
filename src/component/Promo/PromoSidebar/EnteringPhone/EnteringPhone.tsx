@@ -2,9 +2,9 @@ import React, {useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {validatePhoneNumber} from "../../../../state/app-reducer";
 import s from "../PromoSidebar.module.scss";
-import {InputPhone} from "../../InputPhone/InputPhone";
-import {Buttons} from "../../Buttons/Buttons";
-import {Checkbox} from "../../Checkbox/Checkbox";
+import {InputPhone} from "../../../../features/InputPhone/InputPhone";
+import {Buttons} from "../../../../features/Buttons/Buttons";
+import {Checkbox} from "../../../../features/Checkbox/Checkbox";
 import {AppRootStateType} from "../../../../state/store";
 
 export const EnteringPhone: React.FC = React.memo(() => {

@@ -8,14 +8,14 @@ import {AppRootStateType} from "../../../state/store";
 
 export const PromoSidebar: React.FC = React.memo(() => {
 
-   const validPhoneNumber = useSelector<AppRootStateType, boolean>(state => state.app.valid )
+   const validPhoneNumber = useSelector<AppRootStateType, boolean>(state => state.app.valid)
 
    return (
       <div className={s.sidebar}>
          {
             !validPhoneNumber
-            ? <EnteringPhone/>
-            : <VerifiedPhone/>
+               ? <EnteringPhone/>
+               : <VerifiedPhone/>
          }
       </div>
    )

@@ -1,7 +1,7 @@
 import React, {FC, KeyboardEvent, useCallback, useState} from "react";
 import s from "./Buttons.module.scss";
 import {useDispatch} from "react-redux";
-import {setValidError} from "../../../state/app-reducer";
+import {setValidError} from "../../state/app-reducer";
 
 type ButtonsPropsType = {
    setPhone: (value: string) => void

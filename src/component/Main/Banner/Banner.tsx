@@ -4,9 +4,6 @@ import qr from '../../../assets/image/qr.png'
 import {useDispatch} from "react-redux";
 import {setIsShowPromoPage} from "../../../state/app-reducer";
 
-// type BannerPropsType = {
-// }
-
 
 export const Banner: React.FC = React.memo(() => {
 
