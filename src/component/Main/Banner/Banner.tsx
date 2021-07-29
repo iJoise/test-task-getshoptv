@@ -1,14 +1,17 @@
-import React, {useEffect, useState} from "react";
+import React, {useCallback, useEffect, useState} from "react";
 import s from "./Banner.module.scss";
 import qr from '../../../assets/image/qr.png'
+import {useDispatch} from "react-redux";
+import {showPromoPage} from "../../../state/app-reducer";
 
 // type BannerPropsType = {
 // }
 
 
-export const Banner: React.FC = () => {
+export const Banner: React.FC = React.memo(() => {
 
    const [showBanner, setShowBanner] = useState(false);
+   const dispatch = useDispatch();
 
    useEffect(() => {
       const timeout = setTimeout(() => {
@@ -19,6 +22,10 @@ export const Banner: React.FC = () => {
       }
    }, []);
 
+   const showPromoPageHandler = useCallback(() => {
+      dispatch(showPromoPage(true));
+   }, [dispatch])
+
    return (
       <div className={s.banner}>
          <div className={`${s.banner__container} ${showBanner && s.showBanner}`}>
@@ -27,9 +34,9 @@ export const Banner: React.FC = () => {
                   <div>ПОДАРИТЕ ЕМУ СОБАКУ!</div></h3>
                <img src={qr} alt="qr code"/>
                <p>Сканируйте QR-код или нажмите ОК</p>
-               <button className={s.banner__btn}>OK</button>
+               <button onClick={showPromoPageHandler} className={s.banner__btn}>OK</button>
             </div>
          </div>
       </div>
    )
-}
+})

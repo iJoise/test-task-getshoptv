@@ -1,0 +1,111 @@
+.sidebar {
+  max-width: 380px;
+  height: 100%;
+  background-color: #86D3F4;
+  padding: 0 48px;
+  box-sizing: border-box;
+  @media (max-width: 992px) {
+    max-width: 305px;
+    padding: 0 38px;
+  }
+  @media (max-width: 768px) {
+    max-width: 240px;
+    padding: 0 20px;
+  }
+  @media (max-width: 480px) {
+    max-width: none;
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 26px;
+    padding-top: 70px;
+    padding-bottom: 15px;
+    text-align: center;
+    @media (max-width: 1110px) {
+      padding-top: 45px;
+    }
+    @media (max-width: 992px) {
+      font-size: 20px;
+      padding-top: 15px;
+      padding-bottom: 10px;
+    }
+    @media (max-width: 768px) {
+      font-size: 16px;
+      padding-top: 10px;
+      padding-bottom: 0;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 16px;
+    align-items: center;
+    text-align: center;
+    padding: 15px 0;
+    @media (max-width: 992px) {
+      padding: 5px 0;
+    }
+    @media (max-width: 768px) {
+      font-size: 12px;
+      line-height: 14px;
+      padding: 0 0 5px 0;
+    }
+  }
+
+
+  &__row {
+    @media (max-width: 480px) {
+      display: flex;
+    }
+  }
+
+  &__bottom {
+    @media (max-width: 480px) {
+      padding-left: 30px;
+      padding-top: 40px;
+    }
+  }
+}
+
+.checkbox_box {
+  padding: 15px 0;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  @media (max-width: 992px) {
+    padding: 0;
+    height: 40px;
+  }
+  @media (max-width: 480px) {
+    height: 20px;
+    padding-bottom: 10px;
+  }
+}
+
+.confirm_btn {
+  margin-top: 15px;
+  width: 284px;
+  height: 52px;
+  border: 2px solid #4E4E4E;
+  background-color: transparent;
+  color: #4E4E4E;
+  @media (max-width: 992px) {
+    margin-top: 5px;
+    width: 228px;
+    height: 42px;
+  }
+  @media (max-width: 768px) {
+    width: 182px;
+  }
+  @media (max-width: 480px) {
+    width: 140px;
+    height: 35px;
+  }
+}
+
+.enabled {
+  border: none;
+  background-color: black;
+  color: #ffffff;
+}
