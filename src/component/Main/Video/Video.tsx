@@ -1,6 +1,6 @@
 import React from "react";
 import s from "./Video.module.scss";
-import video from "../../assets/video/video.mp4";
+import video from "../../../assets/video/video.mp4";
 
 // type VideoPropsType = {
 //

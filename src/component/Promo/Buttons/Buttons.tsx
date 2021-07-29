@@ -9,13 +9,11 @@ type ButtonsPropsType = {
 const phoneButtons = ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'clear', '0']
 
 export const Buttons: FC<ButtonsPropsType> = React.memo(({setPhone, phone}) => {
-   console.log(phone.length)
 
-   const [active, setActive] = useState(phoneButtons[0]);
+   const [active, setActive] = useState('');
    const [animate, setAnimate] = useState(false);
 
    const onClickHandler = useCallback((btn: string) => {
-      console.log(btn)
       if (phone.length >= 10) {
          return;
       }
@@ -87,10 +85,12 @@ export const Buttons: FC<ButtonsPropsType> = React.memo(({setPhone, phone}) => {
          } else {
             clearInputHandler(active)
          }
-
-         // active === 'clear' ? clearInputHandler(active) : setPhone(`${phone}${active}`);
          setAnimate(true)
       }
+      if (e.key === 'Backspace') {
+         clearInputHandler(active)
+      }
+
    }, [active, phone, clearInputHandler, onClickHandler]);
 
    return (

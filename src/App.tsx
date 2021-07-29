@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './App.module.scss';
-import {Video} from "./component/Video/Video";
-import {Banner} from "./component/Banner/Banner";
+import {Main} from "./component/Main/Main";
+import {Promo} from "./component/Promo/Promo";
 
 const App = () => {
 
@@ -9,8 +9,8 @@ const App = () => {
    return (
       <div className={s.App}>
          <div className={s.container}>
-            <Video/>
-            <Banner/>
+            {/*<Main/>*/}
+            <Promo/>
          </div>
       </div>
    );

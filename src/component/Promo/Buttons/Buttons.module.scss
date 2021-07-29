@@ -1,0 +1,76 @@
+.buttonBlock {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 10px;
+  @media (max-width: 992px) {
+    padding-bottom: 5px;
+  }
+  @media (max-width: 480px) {
+    max-width: 160px;
+  }
+}
+
+.btn {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 12px 30px;
+  width: 88px;
+  height: 52px;
+  background-color: transparent;
+  border: 2px solid black;
+  @media (max-width: 992px) {
+    height: 42px;
+    width: 70px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+  @media (max-width: 768px) {
+    height: 40px;
+    width: 63px;
+    padding: 6px 15px;
+  }
+  @media (max-width: 480px) {
+    height: 30px;
+    width: 50px;
+    padding: 3px 8px;
+  }
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    transform: scale(0.9, 0.9);
+  }
+}
+
+.clear {
+  width: 186px;
+  @media (max-width: 992px) {
+    width: 145px;
+  }
+  @media (max-width: 768px) {
+    width: 131px;
+  }
+  @media (max-width: 480px) {
+    width: 105px;
+  }
+}
+
+.active {
+  color: white;
+  background-color: black;
+}
+
+.click {
+  transform: scale(0.9, 0.9);
+}

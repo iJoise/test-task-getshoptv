@@ -1,17 +1,27 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import s from "./Banner.module.scss";
-import qr from '../../assets/image/qr.png'
+import qr from '../../../assets/image/qr.png'
 
 // type BannerPropsType = {
-//
 // }
 
 
 export const Banner: React.FC = () => {
 
+   const [showBanner, setShowBanner] = useState(false);
+
+   useEffect(() => {
+      const timeout = setTimeout(() => {
+         setShowBanner(true)
+      }, 5000);
+      return () => {
+         clearTimeout(timeout);
+      }
+   }, []);
+
    return (
       <div className={s.banner}>
-         <div className={s.banner__container}>
+         <div className={`${s.banner__container} ${showBanner && s.showBanner}`}>
             <div className={s.banner__body}>
                <h3>ИСПОЛНИТЕ МЕЧТУ ВАШЕГО МАЛЫША!
                   <div>ПОДАРИТЕ ЕМУ СОБАКУ!</div></h3>

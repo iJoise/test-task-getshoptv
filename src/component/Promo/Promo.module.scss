@@ -1,0 +1,141 @@
+.promo {
+  height: 100%;
+  background-image: url('../../assets/image/promo-bg.png');
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  &__row {
+    @media (max-width: 480px) {
+      display: flex;
+    }
+  }
+  &__bottom {
+  @media (max-width: 480px) {
+   padding-left: 30px;
+    padding-top: 40px;
+  }
+  }
+}
+
+.sidebar {
+  max-width: 380px;
+  height: 100%;
+  background-color: #86D3F4;
+  padding: 0 48px;
+  box-sizing: border-box;
+  @media (max-width: 992px) {
+    max-width: 305px;
+    padding: 0 38px;
+  }
+  @media (max-width: 768px) {
+    max-width: 240px;
+    padding: 0 20px;
+  }
+  @media (max-width: 480px) {
+    max-width: none;
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 26px;
+    padding-top: 70px;
+    padding-bottom: 15px;
+    text-align: center;
+    @media (max-width: 1110px) {
+      padding-top: 45px;
+    }
+    @media (max-width: 992px) {
+      font-size: 20px;
+      padding-top: 15px;
+      padding-bottom: 10px;
+    }
+    @media (max-width: 768px) {
+      font-size: 16px;
+      padding-top: 10px;
+      padding-bottom: 0;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 16px;
+    align-items: center;
+    text-align: center;
+    padding: 15px 0;
+    @media (max-width: 992px) {
+      padding: 5px 0;
+    }
+    @media (max-width: 768px) {
+      font-size: 12px;
+      line-height: 14px;
+      padding: 0 0 5px 0;
+    }
+  }
+}
+
+.checkbox_box {
+  padding: 15px 0;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  @media (max-width: 992px) {
+    padding: 0;
+    height: 40px;
+  }
+  @media (max-width: 480px) {
+    height: 20px;
+    padding-bottom: 10px;
+  }
+}
+
+.confirm_btn {
+  margin-top: 15px;
+  border: 2px solid black;
+  background-color: transparent;
+  width: 284px;
+  height: 52px;
+  @media (max-width: 992px) {
+    margin-top: 5px;
+    width: 228px;
+    height: 42px;
+  }
+  @media (max-width: 768px) {
+    width: 182px;
+  }
+  @media (max-width: 480px) {
+    width: 140px;
+    height: 35px;
+  }
+}
+
+.close_promo {
+  margin: 20px 20px 0 0;
+  @media (max-width: 992px) {
+    margin: 15px 15px 0 0;
+  }
+  @media (max-width: 480px) {
+    margin: 5px 5px 0 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &__btn {
+    height: 52px;
+    width: 88px;
+    border: 3px solid #000000;
+    font-size: 32px;
+    line-height: 32px;
+    @media (max-width: 992px) {
+      height: 42px;
+      width: 70px;
+    }
+    @media (max-width: 480px) {
+      height: 20px;
+      width: 35px;
+      font-size: 18px;
+      line-height: 0;
+    }
+  }
+}
