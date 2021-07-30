@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const ACCESS_KEY = '4f1369e4042c889fe2a91bd98bf8b974';
-const baseUrl = 'http://apilayer.net/api/validate';
+const ACCESS_KEY = '7b742308524043a3f9e3ae42aab26a02';
+const baseUrl = 'https://apilayer.net/api/validate';
 
 export const validateApi = {
    async checkPhone(value: string) {
