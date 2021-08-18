@@ -23,7 +23,7 @@ type FormData = {
 
 export const Login: React.FC<LoginPropsType> = React.memo((props) => {
 
-   const {errorMessage, setErrorMessage, setIsFetching, isFetching, setIsAuth, setUserEmail} = props
+   const {errorMessage, setErrorMessage, setIsFetching, isFetching, setIsAuth, setUserEmail} = props;
 
    const {register, handleSubmit, formState: {errors}} = useForm<FormData>();
 
@@ -34,8 +34,8 @@ export const Login: React.FC<LoginPropsType> = React.memo((props) => {
          setIsAuth(true);
          response.data.email && setUserEmail(response.data.email);
          if (response.data.rememberMe) {
-            localStorage.setItem('isAuth', JSON.stringify(response.data.isAuth))
-            localStorage.setItem('userEmail', JSON.stringify(response.data.email))
+            localStorage.setItem('isAuth', JSON.stringify(response.data.isAuth));
+            localStorage.setItem('userEmail', JSON.stringify(response.data.email));
          }
       } catch(err) {
          setErrorMessage(err.data.message);

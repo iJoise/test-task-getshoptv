@@ -5,8 +5,8 @@ import {Login} from "./components/Login";
 import {Profile} from "./components/Profile";
 import {Title} from "./components/Title";
 import {Flex} from "./components/common/Flex";
-import {initialState, loginReducer} from "./reducer/reducer";
-import {action} from "./reducer/action";
+import {initialState, loginReducer} from "./state/reducer";
+import {action} from "./state/action";
 
 const AppWrapper = styled.div`
   width: 100%;
