@@ -1,4 +1,5 @@
-import {Action_Type, ActionType} from "./action";
+import {ActionType, StateType} from "./types";
+import {Action_Type} from "../constants";
 
 export const initialState: StateType = {
    isFetching: false,
@@ -17,12 +18,4 @@ export const loginReducer = (state: StateType, action: ActionType): StateType =>
       default:
          return state;
    }
-}
-
-
-export type StateType = {
-   isFetching: boolean
-   isError: string | null
-   isAuth: boolean
-   userEmail: string
 }

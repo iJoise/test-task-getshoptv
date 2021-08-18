@@ -14,25 +14,27 @@ type LoginPropsType = {
    setIsAuth: (value: boolean) => void
    setUserEmail: (userEmail: string) => void
 }
+
 type FormData = {
    email: string,
    password: string,
    rememberMe: boolean
 };
 
-
 export const Login: React.FC<LoginPropsType> = React.memo((props) => {
-
    const {errorMessage, setErrorMessage, setIsFetching, isFetching, setIsAuth, setUserEmail} = props;
-
    const {register, handleSubmit, formState: {errors}} = useForm<FormData>();
 
    const onSubmit = useCallback(async (data: FormData) => {
       try {
          setIsFetching(true);
+
          const response = await api.login(data);
+
          setIsAuth(true);
+
          response.data.email && setUserEmail(response.data.email);
+
          if (response.data.rememberMe) {
             localStorage.setItem('isAuth', JSON.stringify(response.data.isAuth));
             localStorage.setItem('userEmail', JSON.stringify(response.data.email));
@@ -43,7 +45,6 @@ export const Login: React.FC<LoginPropsType> = React.memo((props) => {
          setIsFetching(false);
       }
    }, [setErrorMessage, setIsFetching, setIsAuth, setUserEmail]);
-
 
    return (
       <LoginContainer>
@@ -85,7 +86,6 @@ export const Login: React.FC<LoginPropsType> = React.memo((props) => {
 const ServerErrorBlock = styled.div`
   height: 60px;
 `
-
 const LoginContainer = styled.h1`
   max-width: 650px;
   margin: 0 auto;

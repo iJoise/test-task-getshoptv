@@ -5,15 +5,12 @@ type ServerErrorPropsType = {
    errorMessage: string | null
 }
 
-export const ServerError: React.FC<ServerErrorPropsType> = ({errorMessage}) => {
-
-   return (
-      <StyledError>
-         <StyleIcon>!</StyleIcon>
-         <StyledMessage>{errorMessage}</StyledMessage>
-      </StyledError>
-   )
-}
+export const ServerError: React.FC<ServerErrorPropsType> = ({errorMessage}) => (
+   <StyledError>
+      <StyleIcon>!</StyleIcon>
+      <StyledMessage>{errorMessage}</StyledMessage>
+   </StyledError>
+)
 
 const StyledError = styled.h1`
   width: 100%;
@@ -24,7 +21,6 @@ const StyledError = styled.h1`
   height: 60px;
   padding: 20px;
 `
-
 const StyleIcon = styled.span`
   display: inline-block;
   text-align: center;

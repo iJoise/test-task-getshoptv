@@ -7,24 +7,15 @@ import {Title} from "./components/Title";
 import {Flex} from "./components/common/Flex";
 import {initialState, loginReducer} from "./state/reducer";
 import {action} from "./state/action";
+import {Path} from "./constants";
 
 const AppWrapper = styled.div`
   width: 100%;
   min-height: 100vh;
 `
 
-function App() {
+export const App = () => {
    const [state, dispatch] = useReducer(loginReducer, initialState);
-
-   useEffect(() => {
-      const isAuth = localStorage.getItem('isAuth');
-      const userEmail = localStorage.getItem('userEmail');
-      if (isAuth && userEmail) {
-         dispatch(action.setUserEmail(JSON.parse(userEmail)));
-         dispatch(action.setIsAuth(JSON.parse(isAuth)));
-      }
-   }, []);
-
 
    const setErrorMessage = useCallback((error: string) => {
       dispatch(action.setIsError(error));
@@ -39,18 +30,27 @@ function App() {
       dispatch(action.setUserEmail(userEmail));
    }, []);
 
+   useEffect(() => {
+      const isAuth = localStorage.getItem('isAuth');
+      const userEmail = localStorage.getItem('userEmail');
+      if (isAuth && userEmail) {
+         dispatch(action.setUserEmail(JSON.parse(userEmail)));
+         dispatch(action.setIsAuth(JSON.parse(isAuth)));
+      }
+   }, []);
+
    return (
       <AppWrapper>
          <Flex justify={'center'}>
             <Title/>
          </Flex>
-         <Route path={'/profile'} render={() =>
+         <Route path={Path.PROFILE} render={() =>
             <Profile
                userEmail={state.userEmail}
                setIsAuth={setIsAuth}
             />}
          />
-         <Route path={'/login'} render={() =>
+         <Route path={Path.LOGIN} render={() =>
             <Login
                setErrorMessage={setErrorMessage}
                errorMessage={state.isError}
@@ -62,11 +62,11 @@ function App() {
          />
          {
             state.isAuth
-               ? <Redirect to='/profile'/>
-               : <Redirect to='/login'/>
+               ? <Redirect to={Path.PROFILE}/>
+               : <Redirect to={Path.LOGIN}/>
          }
       </AppWrapper>
    );
 }
 
-export default App;
+

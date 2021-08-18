@@ -10,6 +10,11 @@ type FlexPropsType = {
    children: ReactNode
 }
 
+export const Flex: React.FC<FlexPropsType> = (props) => {
+
+   return <StyledFlex {...props}/>
+}
+
 const StyledFlex = styled.div<FlexPropsType>`
   display: flex;
   flex-direction: ${props => props.direction || 'row'};
@@ -18,8 +23,3 @@ const StyledFlex = styled.div<FlexPropsType>`
   margin: ${({margin}) => margin || '0'};
   height: ${({height}) => height || 'auto'};
 `
-
-export const Flex: React.FC<FlexPropsType> = (props) => {
-
-   return <StyledFlex {...props}/>
-}

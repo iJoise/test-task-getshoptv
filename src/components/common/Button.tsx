@@ -9,8 +9,6 @@ type ButtonPropsType =  {
    onClick?: (value: boolean) => void
 }
 
-
-
 export const Button: React.FC<ButtonPropsType> = (props) => {
    const {children, onClick, ...restProps} = props
 
