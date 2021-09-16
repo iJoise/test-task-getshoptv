@@ -8,6 +8,7 @@ import {Flex} from "./components/common/Flex";
 import {initialState, loginReducer} from "./state/reducer";
 import {action} from "./state/action";
 import {Path} from "./constants";
+import {Test} from "./components/Test";
 
 const AppWrapper = styled.div`
   width: 100%;
@@ -43,6 +44,7 @@ export const App = () => {
       <AppWrapper>
          <Flex justify={'center'}>
             <Title/>
+            <Test/>
          </Flex>
          <Route path={Path.PROFILE} render={() =>
             <Profile
